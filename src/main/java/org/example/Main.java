@@ -20,7 +20,8 @@ class Calculator {
 }
 public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
-    public static void main(String[] args) {
+    public static int main(String[] args) {
+        logger.info("Starting Program");
         System.out.println("We about to Calculate ni-");
 
         Scanner sc = new Scanner(System.in);
@@ -34,6 +35,10 @@ public class Main {
             System.out.println("4. Division");
             System.out.println("5. exit");
             sel = sc.nextInt();
+            if(sel == 5) {
+                System.out.println("Thanks for using!");
+                return 0;
+            }
             System.out.println("Enter 1st Number");
             a = sc.nextFloat();
             System.out.println("Enter 2nd Number");
@@ -59,13 +64,13 @@ public class Main {
                     System.out.println("Quotient is: " + div);
                     break;
 
-                case 5:
-                    System.out.println("Thanks for using!");
             }
 //            if(sel == 5) {
 //                break;
 //            }
 //        }
 //        System.out.println("Thanks for using!");
+
+        return 0;
     }
 }
