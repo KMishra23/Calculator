@@ -1,19 +1,71 @@
 package org.example;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.util.Scanner;
+class Calculator {
+    public float add(float a, float b) {
+        return a+b;
+    }
+    public float sub(float a, float b) {
+        return a-b;
+    }
+    public float mul(float a, float b) {
+        return a*b;
+    }
+    public float div(float a, float b) {
+        return a/b;
+    }
+}
 public class Main {
+    private static final Logger logger = LogManager.getLogger(Main.class);
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        System.out.println("We about to Calculate ni-");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Scanner sc = new Scanner(System.in);
+        Calculator calc = new Calculator();
+        int sel = 1; float a, b;
+//        while(true) {
+            System.out.println("Enter an option:");
+            System.out.println("1. Addition");
+            System.out.println("2. Subtraction");
+            System.out.println("3. Multiplication");
+            System.out.println("4. Division");
+            System.out.println("5. exit");
+            sel = sc.nextInt();
+            System.out.println("Enter 1st Number");
+            a = sc.nextFloat();
+            System.out.println("Enter 2nd Number");
+            b = sc.nextFloat();
+            switch (sel) {
+                case 1:
+                    float add = calc.add(a, b);
+                    System.out.println("Sum is: " + add);
+                    break;
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+                case 2:
+                    float sub = calc.sub(a, b);
+                    System.out.println("Difference is: " + sub);
+                    break;
+
+                case 3:
+                    float mul = calc.mul(a, b);
+                    System.out.println("Product is: " + mul);
+                    break;
+
+                case 4:
+                    float div = calc.div(a, b);
+                    System.out.println("Quotient is: " + div);
+                    break;
+
+                case 5:
+                    System.out.println("Thanks for using!");
+            }
+//            if(sel == 5) {
+//                break;
+//            }
+//        }
+//        System.out.println("Thanks for using!");
     }
 }
