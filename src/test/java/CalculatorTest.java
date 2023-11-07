@@ -10,7 +10,7 @@ public class CalculatorTest {
     public void setUp() { calculator = new Main(); }
     @Test
     public void test_add_positive(){
-        System.out.println("Checking");
+//        System.out.println("Checking");
         float a = 1;
         float b = 2;
         float expectedResult = 3;
