@@ -20,7 +20,7 @@ class Calculator {
 }
 public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
-    public static int main(String[] args) {
+    public static void main(String[] args) {
         logger.info("Starting Program");
         System.out.println("We about to Calculate ni-");
 
@@ -37,7 +37,7 @@ public class Main {
             sel = sc.nextInt();
             if(sel == 5) {
                 System.out.println("Thanks for using!");
-                return 0;
+                return;
             }
             System.out.println("Enter 1st Number");
             a = sc.nextFloat();
@@ -71,6 +71,6 @@ public class Main {
 //        }
 //        System.out.println("Thanks for using!");
 
-        return 0;
+//        return 0;
     }
 }
