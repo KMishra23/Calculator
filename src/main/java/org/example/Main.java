@@ -4,28 +4,26 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.Scanner;
-class Calculator {
-    public float add(float a, float b) {
+public class Main {
+    public static float add(float a, float b) {
         return a+b;
     }
-    public float sub(float a, float b) {
+    public static float sub(float a, float b) {
         return a-b;
     }
-    public float mul(float a, float b) {
+    public static float mul(float a, float b) {
         return a*b;
     }
-    public float div(float a, float b) {
+    public static float div(float a, float b) {
         return a/b;
     }
-}
-public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
     public static void main(String[] args) {
         logger.info("Starting Program");
         System.out.println("We about to Calculate ni-");
 
         Scanner sc = new Scanner(System.in);
-        Calculator calc = new Calculator();
+//        Calculator calc = new Calculator();
         int sel = 1; float a, b;
 //        while(true) {
             System.out.println("Enter an option:");
@@ -45,22 +43,22 @@ public class Main {
             b = sc.nextFloat();
             switch (sel) {
                 case 1:
-                    float add = calc.add(a, b);
+                    float add = add(a, b);
                     System.out.println("Sum is: " + add);
                     break;
 
                 case 2:
-                    float sub = calc.sub(a, b);
+                    float sub = sub(a, b);
                     System.out.println("Difference is: " + sub);
                     break;
 
                 case 3:
-                    float mul = calc.mul(a, b);
+                    float mul = mul(a, b);
                     System.out.println("Product is: " + mul);
                     break;
 
                 case 4:
-                    float div = calc.div(a, b);
+                    float div = div(a, b);
                     System.out.println("Quotient is: " + div);
                     break;
 
