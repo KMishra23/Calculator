@@ -25,7 +25,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 //        Calculator calc = new Calculator();
         int sel = 1; float a, b;
-//        while(true) {
+        while(true) {
             System.out.println("Enter an option:");
             System.out.println("1. Addition");
             System.out.println("2. Subtraction");
@@ -35,7 +35,7 @@ public class Main {
             sel = sc.nextInt();
             if(sel == 5) {
                 System.out.println("Thanks for using!");
-                return;
+                break;
             }
             System.out.println("Enter 1st Number");
             a = sc.nextFloat();
@@ -63,11 +63,8 @@ public class Main {
                     break;
 
             }
-//            if(sel == 5) {
-//                break;
-//            }
-//        }
-//        System.out.println("Thanks for using!");
+        }
+        System.out.println("Thanks for using!");
 
 //        return 0;
     }
