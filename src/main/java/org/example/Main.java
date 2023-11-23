@@ -20,7 +20,7 @@ public class Main {
     private static final Logger logger = LogManager.getLogger(Main.class);
     public static void main(String[] args) {
         logger.info("Starting Program");
-        System.out.println("We about to Calculate ni-");
+        System.out.println("We about to Calculate my dude");
 
         Scanner sc = new Scanner(System.in);
 //        Calculator calc = new Calculator();
