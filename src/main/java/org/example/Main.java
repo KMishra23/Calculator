@@ -21,6 +21,7 @@ public class Main {
     public static void main(String[] args) {
         logger.info("Starting Program");
         System.out.println("We about to Calculate my dude");
+        //new commit check
 
         Scanner sc = new Scanner(System.in);
 //        Calculator calc = new Calculator();
